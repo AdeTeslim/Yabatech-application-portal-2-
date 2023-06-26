@@ -73,7 +73,7 @@ function validateField() {
       }
     }
     if (inputValue.length > 12 & inputValue.length <= 14) {
-      if (alphabetPattern.test(inputValue)){
+      if (/^[a-zA-Z]+$/.test(inputValue)){
         console.log("Its Alphabet");
         errorEl.innerText = " "
         return true;
