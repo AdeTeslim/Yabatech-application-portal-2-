@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2 Test</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="bd1">
+            <div class="bd1a">
+                <div class="image">
+                    <img src="../IMAGES/logo.png" alt="logo" width="90", height="90">
+                </div>
+
+                <div class="heading">
+                    <p>
+                        YABA COLLEGE OF TECHNOLOGY <br>
+                        APPLICATION PORTAL
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bd2">
+            <div class="thetop">
+                <img src="../IMAGES/logo.png" alt="logo" width="90", height="90">
+                <p>APPLICATION PORTAL</p>
+            </div>
+            <div class="bd2a dashboard">
+                <h2 class="word"> PORTAL</h2>
+                <div class="btn">
+                    <button type="button" onclick="showPost()">Post-UTME <br>Application </button>
+                    <a href="#"><button type="button">Online <br>Application </button></a>
+                    <button type="button" onclick="showLogin()">Login</button>
+                </div> 
+
+            </div> 
+
+            <div class="bd2b bd4">
+                <h2 class="word"> <i class="fa-solid fa-arrow-left icon" onclick="showIcon()"></i> NEW APPLICANT</h2>
+                <p class="text word">Username</p>
+                <input type="text" id="validate" name="" placeholder="Enter JAMB no." required>
+                <p class="errorel"></p>
+                <!-- <p><button type="submit" class="login-btn" onclick="validateField(document.getElementById('validate'))">Login</button></p>  -->
+                <p><button type="submit" class="login-btn">Login</button></p> 
+                <p class="bd2btext"> <i><span class="click" onclick="showClick()"> Click here</span> if you have an existing application. </i> </p> 
+
+            </div>
+
+            <div class="bd2c login">
+                <form action="">
+                    <h2 id="login" class="word"> <i class="fa-solid fa-arrow-left icon" onclick="showIcon()"></i> POST-UTME LOGIN</h2>
+                    <p class="text word">Username</p>
+                        <input type="text" name="" placeholder="Enter JAMB no." required>
+                    <p class="text word">Password</p>
+                        <input type="password" name="" placeholder="Enter Password" minlength="8"required>
+                    <p><button type="submit" onclick="validateField(document.getElementById('validate'))">Login</button></p> 
+                    <p class="bd2btext"> <i><span class="click1" onclick="showClick1()"> Click here</span> if you don't have an existing application. </i> </p> 
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Yaba College Of Technology. 
+        <br>Designed By CITM. All Rights Reserved.</p>
+    </footer>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

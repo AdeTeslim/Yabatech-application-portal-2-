@@ -1,0 +1,267 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} */
+body{
+    background-color: rgb(228,233,244);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    /* border: 5px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.thetop{
+    /* border: 5px solid red; */
+    display: none;
+    font-weight: 600;
+    color: rgba(0,102,0);
+    justify-content: center;
+    text-align: center;
+}
+.bd1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,102,0); 
+    height: 345px;
+    width: 270px;
+    padding: 30px 40px;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+.bd1a{
+    padding-top: 60px;
+    padding-bottom: 50px;
+    align-items: center;
+    align-content: center;
+    color: rgb(248,196,0);
+    font-weight: 600;
+}
+
+
+.bd2{
+    background-color: white;
+    padding: 30px 40px;
+    height: 345px;
+    width: 310px;
+    /* justify-content: center;     */
+    /* align-items: center; */
+    border-radius: 0px 5px 5px 0px; 
+    align-content: center;   
+    /* position: absolute; */
+}
+.bd2 > p{
+    text-align: center;
+} 
+.word{
+    color: rgb(0,102,0);
+    font-weight: 400;
+}
+.icon{
+    margin-right: 10px;
+    cursor: pointer;
+    color: rgb(0,102,0);
+}
+.icon:hover {
+    color: rgb(248,196,0);
+}
+.text{
+    margin-bottom: 2px;
+}
+.btn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    align-content: center;
+    text-align: center;
+    /* margin-top: 49px; */
+    /* border: 5px solid red; */
+}
+input[type=text], [type="password"]{
+    width: 97%;
+    height: 40px;
+    border: 1px solid white;
+    background-color: rgb(228,233,244);
+    border-radius: 5px;
+    padding: 0 10px;
+    outline-color: rgb(0,102,0);
+}
+
+
+input.error {
+    border: 2px solid red;
+    outline: none;
+}
+input.error:hover{
+    outline: none;
+}
+.errorel{
+    color: red;
+    font-size: 12px;
+}
+
+
+button{
+    background-color: white;
+    width: 100%;
+    /* width: 200px; */
+    height: 50px;
+    font-size: medium;     
+    border-radius: 8px;
+    border-style: solid;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+button:not(:disabled):hover {
+    background-color: rgb(248,196,0);
+    border: 2px solid white;
+    color: white;
+}
+footer{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    height: auto; 
+    text-align: center;
+}
+
+.dashboard {
+    display: block;
+}
+
+.bd2c {
+    display: none;
+}
+.bd2b{
+    display: none;
+}
+.bd2btext{
+    font-size: 12px;
+    /* margin-top: 0px; */
+}
+.click, .click1{
+    color: rgb(0,102,0);
+    cursor: pointer;
+    font-weight: 900;
+} 
+
+/* Tablets Landscape*/
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (orientation: landscape){
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+    }
+}
+/* Tablets Portrait*/
+@media  only screen and (max-width: 1200px) and (min-width: 701px) and (orientation: portrait){
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 300px; */
+        margin-top: 25%;
+    }
+}
+
+/* Phones Landscape*/
+@media only screen and (max-width: 950px) and (min-width: 230px) and (orientation: landscape){
+    .bd1{
+        display: none;
+    }
+    footer{
+        display: none;
+        margin-top: 0px;
+    }
+    .container {
+        /* display: flex; */
+        justify-content: center;
+        margin-top: 0px;
+    }
+    .thetop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 5px solid red; */
+        font-weight: 600;
+        color: rgba(0,102,0);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bd2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: white;
+        padding: 30px 40px;
+        height: 470px;
+        width: 310px;
+        border-radius: 5px 5px 5px 5px; 
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        /* position: absolute; */
+    }
+}
+
+/* Phones Portrait*/
+@media  only screen and (max-width: 700px) and (min-width: 230px) and (orientation: portrait){
+    .container {
+        /* border: 2px solid red; */
+        margin-top: 5%;
+    }
+    .bd1{
+        display: none;
+    }
+    .thetop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 5px solid red; */
+        font-weight: 600;
+        color: rgba(0,102,0);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bd2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: white;
+        padding: 30px 40px;
+        height: 480px;
+        width: 310px;
+        border-radius: 5px 5px 5px 5px; 
+        margin-left: auto;
+        margin-right: auto;
+        /* position: absolute; */
+    }
+    footer{
+        display: none;
+    }
+}
+
+/* orientation Portrait & Landscape  */
+/* for landscape on phones the footer would be set on display none */
