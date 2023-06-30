@@ -42,7 +42,7 @@ function showIcon() {
 function validateField(event) {
     console.log(event.target)
     var inputValue = event.target.value;
-    var numberPattern = /^[0-9]/;
+    var numberPattern = /^[0-9]+$/;
     var alphabetPattern = /^[a-zA-Z]/;
     const errorEl = event.target.parentElement.querySelector(".errorel");
     const loginBtn = event.target.parentElement.querySelector(".login-btn");
