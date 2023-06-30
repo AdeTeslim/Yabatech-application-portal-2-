@@ -3,10 +3,14 @@ const dashboardBox = document.querySelector(".dashboard")
 const bd4Box = document.querySelector(".bd4")
 const clickBox = document.querySelector(".login")
 const click1Box = document.querySelector(".bd4")
-const errorEl = document.querySelector(".errorel")
-const loginBtn = document.querySelector('.login-btn')
+// const errorEl = document.querySelectorAll(".errorel")
+const loginBtn = document.querySelectorAll('.login-btn')
 
-loginBtn.disabled = true
+loginBtn.forEach(btn => {
+  btn.disabled = true
+})
+
+
 
 function showLogin() {
     loginBox.style.display = "block"
@@ -35,21 +39,29 @@ function showIcon() {
 }
 
 
-function validateField() {
-    var inputValue = validate.value;
+function validateField(event) {
+    console.log(event.target)
+    var inputValue = event.target.value;
     var numberPattern = /^[0-9]/;
     var alphabetPattern = /^[a-zA-Z]/;
+    const errorEl = event.target.parentElement.querySelector(".errorel");
+    const loginBtn = event.target.parentElement.querySelector(".login-btn");
+    loginBtn.disabled = true;
     // console.log(inputValue);
 
     // Check alphabets
     // var pattern = inputValue.match(/[a-zA-Z]/g);
     // var pattern = /^\d{4}\d{8}[a-z]{2}$/i
-    var pattern = /\d\d\d\d\d\d\d\d\d\d\d\d[a-z][a-z]/i;
+    // var pattern = /\d\d\d\d\d\d\d\d\d\d\d\d[a-z][a-z]/i;
 
     // Check length
     if (inputValue.length > 14) {
       // alert("Field length should not exceed 14 characters.");
       errorEl.innerText = "Field length should not exceed 14 characters."
+      // errorEl.forEach(err => {
+      //   err.innerText = "Field length should not exceed 14 characters."
+      // })
+      loginBtn.disabled = true
       return false;
     }
 
@@ -66,20 +78,27 @@ function validateField() {
         console.log("Its number");
         errorEl.innerText = " "
         return true;
-      }else{
+      }
+      else{
         console.log("Not number");
         errorEl.innerText = "Kindly Input Number digits."
         return false;
       }
     }
     if (inputValue.length > 12 & inputValue.length <= 14) {
-      if (/^[a-zA-Z]+$/.test(inputValue)){
+      if (/^[0-9]{12}[a-zA-Z]{1,2}$/i.test(inputValue)) {
+        if (inputValue.length === 14) {
+          loginBtn.disabled = false
+        }
         console.log("Its Alphabet");
+        console.log(errorEl)
         errorEl.innerText = " "
         return true;
-      }else{
+      }
+      else{
         console.log("Not Alphabet");
         errorEl.innerText = "Kindly Input Last 2 alphabets."
+        loginBtn.disabled = true
         return false;
       }
     }
@@ -96,15 +115,19 @@ function validateField() {
     return true;
   }
   
-var validate = document.getElementById('validate');
+var validate = document.querySelectorAll('.validate');
 
-validate.addEventListener('input', function(event) {
-  // Delay the execution to allow the value to update
-  setTimeout(function() {
-    validateField();
-  }, 0);
+validate.forEach(val => {
+  val.addEventListener('input', function(event) {
+    // Delay the execution to allow the value to update
+    setTimeout(function() {
+      validateField(event);
+    }, 0);
+  })
 })
 
-loginBtn.addEventListener('click', function () {
-  validateField()
+loginBtn.forEach(btn => {
+  btn.addEventListener('click', function () {
+    validateField()
+  })
 })

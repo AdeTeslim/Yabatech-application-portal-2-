@@ -49,7 +49,7 @@
             <div class="bd2b bd4">
                 <h2 class="word"> <i class="fa-solid fa-arrow-left icon" onclick="showIcon()"></i> NEW APPLICANT</h2>
                 <p class="text word">Username</p>
-                <input type="text" id="validate" name="" placeholder="Enter JAMB no." required>
+                <input type="text" class="validate" name="" placeholder="Enter JAMB no." required>
                 <p class="errorel"></p>
                 <!-- <p><button type="submit" class="login-btn" onclick="validateField(document.getElementById('validate'))">Login</button></p>  -->
                 <p><button type="submit" class="login-btn">Login</button></p> 
@@ -61,10 +61,11 @@
                 <form action="">
                     <h2 id="login" class="word"> <i class="fa-solid fa-arrow-left icon" onclick="showIcon()"></i> POST-UTME LOGIN</h2>
                     <p class="text word">Username</p>
-                        <input type="text" name="" placeholder="Enter JAMB no." required>
+                        <input type="text" name="" class="validate" placeholder="Enter JAMB no." required>
+                        <p class="errorel"></p>
                     <p class="text word">Password</p>
                         <input type="password" name="" placeholder="Enter Password" minlength="8"required>
-                    <p><button type="submit" onclick="validateField(document.getElementById('validate'))">Login</button></p> 
+                    <p><button type="submit" class="login-btn">Login</button></p> 
                     <p class="bd2btext"> <i><span class="click1" onclick="showClick1()"> Click here</span> if you don't have an existing application. </i> </p> 
                 </form>
             </div>
